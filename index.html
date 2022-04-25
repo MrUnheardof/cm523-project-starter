@@ -13,13 +13,149 @@
     <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
     <!-- LINK TO YOUR STYLES -->
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+   
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/slick.js"></script>
+</head>
   </head>
-  <body>
+  
     <!-- YOUR HTML GOES HERE -->
 
     <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
-  </body>
+    <header>
+      <nav>
+        <a href="#" class="nav-link">About</a>
+        <h1> Fairy Cutie </h1>
+    
+        <a href="#" class="nav-link">Product Page</a>
+      </nav>
+    </header>
+    
+    <body>
+      <div class="wrapper">
+    
+        <div class="carousel">
+          <div>
+            <h2 class="slide-title">Q: What kind of product are you looking for?</h2>
+    
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="food" data-text="food" type="radio" name="q1" value="food">
+                <label for="food" class="slide-link">Food</label>
+              </div>
+              <div class="radio-item">
+                <input id="harness" data-text="food" type="radio" name="q1" value="harness">
+                <label for="harness" class="slide-link">Harness</label>
+              </div>
+              <div class="radio-item">
+                <input id="cloth" data-text="food" type="radio" name="q1" value="cloth">
+                <label for="cloth" class="slide-link">Cloth</label>
+              </div>
+              <div class="radio-item">
+                <input id="toy" data-text="food" type="radio" name="q1" value="toy">
+                <label for="toy" class="slide-link">Toy</label>
+              </div>
+    
+            </span>
+    
+          </div>
+          <div>
+            <h2 class="slide-title">Q: What is Your Budget</h2>
+            <p class="slide-text"></p>
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="price1" data-text="food" type="radio" name="q2" value="price1">
+                <label for="price1" class="slide-link">1</label>
+              </div>
+              <div class="radio-item">
+                <input id="price2" data-text="food" type="radio" name="q2" value="price2">
+                <label for="price2" class="slide-link">2</label>
+              </div>
+              <div class="radio-item">
+                <input id="price3" data-text="food" type="radio" name="q2" value="price3">
+                <label for="price3" class="slide-link">3</label>
+              </div>
+            </span>
+          </div>
+          <div>
+            <h2 class="slide-title">Q:Which brand do you prefer</h2>
+            <p class="slide-text"></p>
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="brand1" data-text="food" type="radio" name="q3" value="brand1">
+                <label for="brand1" class="slide-link"> 1 </label>
+              </div>
+              <div class="radio-item">
+    
+                <input id="brand2" data-text="food" type="radio" name="q3" value="brand2">
+                <label for="brand2" class="slide-link">2</label>
+              </div>
+              <div class="radio-item">
+                <input id="brand3" data-text="food" type="radio" name="q3" value="brand3">
+                <label for="brand3" class="slide-link">3</label>
+              </div>
+            </span>
+          </div>
+          <div>
+            <h2 class="slide-title">Q:What size is your pet</h2>
+            <p class="slide-text"></p>
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="size1" data-text="food" type="radio" name="q4" value="size1">
+                <label for="size1" class="slide-link">1</label>
+              </div>
+              <div class="radio-item">
+                <input id="size2" data-text="food" type="radio" name="q4" value="size2">
+                <label for="size2" class="slide-link">2</label>
+              </div>
+              <div class="radio-item">
+                <input id="size3" data-text="food" type="radio" name="q4" value="size3">
+                <label for="size3" class="slide-link">3</label>
+              </div>
+            </span>
+          </div>
+          <div>
+            <h2 class="slide-title">Q:What color do your prefer</h2>
+            <p class="slide-text"></p>
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="color1" data-text="food" type="radio" name="q5" value="color1">
+                <label for="color1" class="slide-link">1</label>
+              </div>
+              <div class="radio-item">
+                <input id="color2" data-text="food" type="radio" name="q5" value="color2">
+                <label for="color2" class="slide-link">2</label>
+              </div>
+              <div class="radio-item">
+                <input id="color3" data-text="food" type="radio" name="q5" value="color3">
+                <label for="size3" class="slide-link">3</label>
+              </div>
+            </span>
+          </div>
+          <div>
+            <h2 class="slide-title">Final</h2>
+            <p class="slide-text"></p>
+            <span class="slide-select">
+              <div class="radio-item">
+                <input id="btnsubmit" data-text="food" type="radio" name="submit" value="btnsubmit">
+                <label for="btnsubmit" class="slide-link">Submit</label>
+              </div>
+            </span>
+          </div>
+    
+        </div>
+    </body>
+    <footer>
+      <nav>
+        <a href="#" class="nav-link">About</a>
+        <h1> Fairy Cutie </h1>
+        <a href="#" class="nav-link">Product Page</a>
+      </nav>
+    </footer>
+
 </html>

@@ -1,2 +1,423 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    font-family: sans-serif;
+    background-color: white;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 105%;
+    background-color: white;
+    z-index: 5;
+    margin: -1em 0em 1em -1em;
+    padding-top: 2em;
+    padding-bottom:2em;
+    color: #333333;
+  }
+  nav a{
+    font-weight:500;
+    text-transform:uppercase;
+    text-decoration:none;
+    color:#16151b;
+    margin:0 15px;
+    font-size:16px;
+    letter-spacing:1px;
+    position:relative;
+    display:inline-block;
+  }
+  nav a:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:#16151b;
+    top:47%;
+    animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  }
+  nav a:hover:before{
+    animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  
+  }
+  @keyframes in{
+    0%{
+      width: 0;
+      left:0;
+      right:auto;
+    }
+    100%{
+      left:0;
+      right:auto;
+      width: 100%;
+    }
+  }
+  @keyframes out{
+    0%{
+      width:100%;
+      left: auto;
+      right: 0;
+    }
+    100%{
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+  @keyframes show{
+    0%{
+      opacity:0;
+      transform:translateY(-10px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  @for $i from 1 through 5 {
+    nav a:nth-child(#{$i}){
+      animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+  }
+  .wrapper {
+    width: 100%;
+    padding-top: 0.5em;
+  }
+
+  h2 {
+    display:float;
+    float:right;
+    color: #fff;
+    padding: 2em 1em 2em 0.5em;
+   
+    font-size:5em;
+    
+    height:auto;
+    font-family: sans-serif;
+  }
+  .carousel {
+    position:fixed;
+    width: 105%;
+    
+    margin-top: 3em;
+    margin-left:-1em;
+    margin-right:20em;
+  }
+  
+  .slick-slide {
+    display:flex;
+    width: 100%;
+    
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    
+  }
+  
+  .slick-slide:nth-child(odd) {
+    background: linear-gradient(222deg, #d3c2ce, #f991cc, #940054);
+     
+  
+      -webkit-animation: AnimationName 1s ease infinite;
+      animation: AnimationName 1s ease infinite;
+  }
+  
+  .slick-slide:nth-child(even) {
+  
+    background: linear-gradient(222deg, #d3c2ce, #f991cc, #940054);
+   
+  
+      -webkit-animation: AnimationName 1s ease infinite;
+      animation: AnimationName 1s ease infinite;
+  }
+  @-webkit-keyframes AnimationName {
+      0%{background-position:97% 0%}
+      50%{background-position:4% 100%}
+      100%{background-position:97% 0%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:97% 0%}
+      50%{background-position:4% 100%}
+      100%{background-position:97% 0%}
+  }
+  
+  .slide-link {
+    display: block;
+    font-family: 'K2D', sans-serif;
+    color:white;
+    font-weight:bold;
+    font-size:5em;
+    padding-left:100px;
+  }
+  .slide-select {
+  position: absolute;
+  display: flex;
+  align-content:center;
+  padding-left:5em;
+  flex-direction: column;
+  
+   padding: 10px;
+   justify-content: center;
+   background-color:rgba(250, 250, 250, 0.7);
+   margin:-1em;
+   width:6%;
+    height: 100vh;
+  
+  
+  
+    
+  }
+  
+  label {
+    width:100%;
+    cursor: pointer;
+  }
+  input[type="radio"] {
+    opacity: 0;
+  }
+
+  input:before + label {
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  }
+  input:hover + label {
+    background: pink;
+    animation:in 0.4s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+    
+  }
+  input:checked + label {
+    background: linear-gradient(0deg, rgba(211,194,206,1) 0%, rgba(226,175,222,1) 100%);
+  }
+  img{
+    float:right;
+    max-width:50%;
+    height:100vh;
+  
+   
+  }
+  .slick-dots{
+    margin-bottom:-30em;
+  }html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  font-family: sans-serif;
+  background-color: white;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 105%;
+  background-color: white;
+  z-index: 5;
+  margin: -1em 0em 1em -1em;
+  padding-top: 2em;
+  padding-bottom:2em;
+  color: #333333;
+}
+nav a{
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#16151b;
+  margin:0 15px;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#16151b;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+.wrapper {
+  width: 100%;
+  padding-top: 0.5em;
+}
+h2 {
+  display:float;
+  float:right;
+  color: #fff;
+  padding: 2em 1em 2em 0.5em;
+ 
+  font-size:5em;
+  width:50%;
+  height:auto;
+  font-family: sans-serif;
+}
+.carousel {
+  position:fixed;
+  width: 105%;
+  height: 100vh;
+  margin-top: 3em;
+  margin-left:-1em;
+  margin-right:20em;
+}
+
+.slick-slide {
+  display:flex;
+  width: 100%;
+  height:90vh;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  
+}
+
+.slick-slide:nth-child(odd) {
+  background: linear-gradient(222deg, #d3c2ce, #f991cc, #940054);
+   
+
+    -webkit-animation: AnimationName 1s ease infinite;
+    animation: AnimationName 1s ease infinite;
+}
+
+.slick-slide:nth-child(even) {
+
+  background: linear-gradient(222deg, #d3c2ce, #f991cc, #940054);
+ 
+
+    -webkit-animation: AnimationName 1s ease infinite;
+    animation: AnimationName 1s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:97% 0%}
+    50%{background-position:4% 100%}
+    100%{background-position:97% 0%}
+}
+
+.slide-link {
+  display: block;
+  font-family: 'K2D', sans-serif;
+  color:white;
+  font-weight:bold;
+  font-size:5em;
+  padding-left:100px;
+}
+.slide-select {
+position: absolute;
+display: flex;
+align-content:center;
+padding-left:5em;
+flex-direction: column;
+
+ padding: 10px;
+ justify-content: center;
+  background-color:rgba(250, 250, 250, 0.7);
+ margin:-1em;
+ width:6%;
+  height: 100%;
+
+
+
+  
+}
+
+label {
+  width:100%;
+  cursor: pointer;
+}
+input[type="radio"] {
+  opacity: 0;
+}
+
+input:before + label {
+animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+input:hover + label {
+  background: pink;
+  animation:in 0.4s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+  
+}
+input:checked + label {
+  background: linear-gradient(0deg, rgba(211,194,206,1) 0%, rgba(226,175,222,1) 100%);
+}
+img{
+  float:right;
+  max-width:50%;
+  height:100vh;
+
+ 
+}
+.slick-dots{
+  margin-bottom:-30em;
+}
