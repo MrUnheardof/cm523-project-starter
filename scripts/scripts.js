@@ -157,6 +157,7 @@ function getPage(result) {
   console.log(result);
   result = result.toLowerCase();
   console.log(result);
+  localStorage.setItem('proResult','result');
   //window.location= result+'html.com';
 }
 
@@ -165,7 +166,6 @@ $(document).ready(function () {
   $slideshow = $(".carousel").slick({
     slidesToShow: 1,
     infinite: false,
-    arrows: true,
     dots: true
   });
 });
