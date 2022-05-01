@@ -6,72 +6,173 @@ const proBrand = document.getElementsByName("q3");
 const proSize = document.getElementsByName("q4");
 const proColor = document.getElementsByName("q5");
 
+
+
 submitBtn.addEventListener("click", getAnswer);
+
+
 
 var productData = [
   {
-    id: "F-001",
-    type: "food",
-    color: "red",
+    id: "C-001",
+    type: "cloth",
+    color: "yellow",
     price: "price1",
     brand: "brand1",
     size: "size1"
   },
+
   {
-    id: "F-002",
-    type: "food",
-    color: "blue",
+    id: "C-002",
+    type: "cloth",
+    color: "pink",
     price: "price1",
     brand: "brand1",
+    size: "size1"
+  },
+
+  {
+    id: "C-003",
+    type: "cloth",
+    color: "blue",
+    price: "price1",
+    brand: "brand2",
     size: "size2"
   },
+
+  {
+    id: "C-004",
+    type: "cloth",
+    color: "purple",
+    price: "price2",
+    brand: "brand2",
+    size: "size2"
+  },
+
+  {
+    id: "C-005",
+    type: "cloth",
+    color: "orange",
+    price: "price2",
+    brand: "brand3",
+    size: "size2"
+  },
+
   {
     id: "H-001",
     type: "harness",
-    color: "red",
+    color: "blue",
     price: "price1",
+    brand: "brand1",
+    size: "size1"
+  },
+
+  {
+    id: "H-002",
+    type: "harness",
+    color: "white",
+    price: "price1",
+    brand: "brand1",
+    size: "size1"
+  },
+
+  {
+    id: "H-003",
+    type: "harness",
+    color: "greem",
+    price: "price2",
     brand: "brand2",
     size: "size3"
   },
+
   {
-    id: "H-002",
+    id: "H-004",
+    type: "harness",
+    color: "black",
+    price: "price2",
+    brand: "brand2",
+    size: "size3"
+  },
+
+  {
+    id: "H-005",
     type: "harness",
     color: "blue",
     price: "price2",
     brand: "brand3",
-    size: "brand2"
-  },
-  {
-    id: "C-001",
-    type: "cloth",
-    color: "red",
-    price: "price1",
-    brand: "brand2",
-    size: "size3"
-  },
-  {
-    id: "C-001",
-    type: "cloth",
-    color: "red",
-    price: "price2",
-    brand: "brand3",
     size: "size2"
   },
+
+  {
+    id: "F-001",
+    type: "food",
+    color: "null",
+    price: "price1",
+    brand: "brand1",
+    size: "null"
+  },
+
+  {
+    id: "F-002",
+    type: "food",
+    color: "null",
+    price: "price3",
+    brand: "brand2",
+    size: "null"
+  },
+
+  {
+    id: "F-003",
+    type: "food",
+    color: "null",
+    price: "price1",
+    brand: "brand3",
+    size: "null"
+  },
+
+  {
+    id: "F-004",
+    type: "food",
+    color: "null",
+    price: "price2",
+    brand: "brand4",
+    size: "null"
+  },
+
+  {
+    id: "F-005",
+    type: "food",
+    color: "null",
+    price: "price3",
+    brand: "brand5",
+    size: "null"
+  },
+
   {
     id: "T-001",
     type: "toy",
-    color: "red",
-    price: "price1",
-    brand: "brand2",
+    color: "null",
+    price: "price2",
+    brand: "brand1",
     size: "size3"
   },
+
   {
     id: "T-002",
-    type: "cloth",
-    color: "blue",
-    price: "price2",
+    type: "toy",
+    color: "null",
+    price: "price1",
+    brand: "brand2",
+    size: "null"
+  },
+
+  {
+    id: "T-003",
+    type: "toy",
+    color: "null",
+    price: "price1",
     brand: "brand3",
-    size: "size2"
+    size: "null"
   }
 ];
 
@@ -87,6 +188,7 @@ function getAnswer() {
   answer.size = $("input[type='radio'][name='q4']:checked").val();
   console.log($("input[type='radio'][name='q5']:checked").val());
   answer.color = $("input[type='radio'][name='q5']:checked").val();
+
   findProduct(answer);
 }
 
@@ -132,6 +234,7 @@ function findProduct(ans) {
   });
   console.log(matches);
   var proResult = mode(matches);
+
   console.log("Your product is " + proResult);
   getPage(proResult);
 }
@@ -154,11 +257,12 @@ function mode(array) {
   return maxEl;
 }
 function getPage(result) {
+ 
   console.log(result);
-  result = result.toLowerCase();
-  console.log(result);
-  localStorage.setItem('proResult','result');
-  //window.location= result+'html.com';
+
+  localStorage.setItem("proResult", result);
+
+  window.location.href= "productpage.html";
 }
 
 //slide
@@ -169,7 +273,26 @@ $(document).ready(function () {
     dots: true
   });
 });
-
+$("#food").click(function () {
+  $slideshow.slick("slickRemove", 2);
+  $slideshow.slick("slickRemove", 4);
+  $slideshow.slick("slickRemove", 4);
+  $slideshow.slick("slickRemove", 3);
+});
+$("#cloth").click(function () {
+  $slideshow.slick("slickRemove", 3);
+  $slideshow.slick("slickRemove", 5);
+});
+$("#harness").click(function () {
+  $slideshow.slick("slickRemove", 3);
+  $slideshow.slick("slickRemove", 4);
+});
+$("#toy").click(function () {
+  $slideshow.slick("slickRemove", 3);
+  $slideshow.slick("slickRemove", 4);
+  $slideshow.slick("slickRemove", 4);
+  $slideshow.slick("slickRemove", 3);
+});
 $(".radio-item").click(function () {
   $slideshow.slick("slickNext");
 });
