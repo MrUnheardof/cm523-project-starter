@@ -192,11 +192,31 @@ var productData = [
           size: "null"
           ,
           text:"DOG CHEW TOYS AND TEETH CLEANING - Chewing as well as cleaning to get happy and healthy at same time! Indestructible dog toys with high quality cotton fibers are like dental floss to easily slide in tight spaces and gently stimulates gums, super chewer dog toys large breed provides fresh feeling and sparkle teeth with every chews. Dog chews for aggressive chewers help to from chewing habits and stop destructive behavior, ideal pet toys as puppy toys and aggressive chewers dog toys for large dogs、、、INTERACTIVE DOG TOYS FOR BOREDOM - Dogs are crazy love for chewing, tugging, running, chew toys for aggressive chewers large breed are made for that. Sturdy ropes toys for dogs are perfect for whether dogs self plays at home, tug of war games with you, or as outdoor dog toys. Big dog toys help to burn off excess energy of dogs, keep physically and mentally stimulated. Also great dog training toys to keep them stay focused and make training efficiently, best dog toys for aggressive chewers、、、HEAVY DUTY DOG TOY GIFTS FOR DOGS & GUARANTEE - Dog toy bundle are essential dog tug toys for dogs, best as christmas dog toys and dog birthday toys. The nearly indestructible tough dog toys for aggressive chewers large breed are long lasting and perfect as pitbull toys, german shepherd toys. If your dogs are extremely aggressive chewers, please only play the dog tug toys for large dogs under supervision. We are confident with premium dog toy pack and offer 30 days money-back guarantee"
+        },
+        {
+          id: "T-004",
+          type: "toy",
+          color: "null",
+          price: "15",
+          brand: "brand2",
+          size: "null"
+          ,
+          text:"DOG CHEW TOYS AND TEETH CLEANING - Chewing as well as cleaning to get happy and healthy at same time! Indestructible dog toys with high quality cotton fibers are like dental floss to easily slide in tight spaces and gently stimulates gums, super chewer dog toys large breed provides fresh feeling and sparkle teeth with every chews. Dog chews for aggressive chewers help to from chewing habits and stop destructive behavior, ideal pet toys as puppy toys and aggressive chewers dog toys for large dogs、、、INTERACTIVE DOG TOYS FOR BOREDOM - Dogs are crazy love for chewing, tugging, running, chew toys for aggressive chewers large breed are made for that. Sturdy ropes toys for dogs are perfect for whether dogs self plays at home, tug of war games with you, or as outdoor dog toys. Big dog toys help to burn off excess energy of dogs, keep physically and mentally stimulated. Also great dog training toys to keep them stay focused and make training efficiently, best dog toys for aggressive chewers、、、HEAVY DUTY DOG TOY GIFTS FOR DOGS & GUARANTEE - Dog toy bundle are essential dog tug toys for dogs, best as christmas dog toys and dog birthday toys. The nearly indestructible tough dog toys for aggressive chewers large breed are long lasting and perfect as pitbull toys, german shepherd toys. If your dogs are extremely aggressive chewers, please only play the dog tug toys for large dogs under supervision. We are confident with premium dog toy pack and offer 30 days money-back guarantee"
+        
+        },
+        {
+          id: "T-005",
+          type: "toy",
+          color: "null",
+          price: "26",
+          brand: "brand1",
+          size: "null"
+          ,
+          text:"DOG CHEW TOYS AND TEETH CLEANING - Chewing as well as cleaning to get happy and healthy at same time! Indestructible dog toys with high quality cotton fibers are like dental floss to easily slide in tight spaces and gently stimulates gums, super chewer dog toys large breed provides fresh feeling and sparkle teeth with every chews. Dog chews for aggressive chewers help to from chewing habits and stop destructive behavior, ideal pet toys as puppy toys and aggressive chewers dog toys for large dogs、、、INTERACTIVE DOG TOYS FOR BOREDOM - Dogs are crazy love for chewing, tugging, running, chew toys for aggressive chewers large breed are made for that. Sturdy ropes toys for dogs are perfect for whether dogs self plays at home, tug of war games with you, or as outdoor dog toys. Big dog toys help to burn off excess energy of dogs, keep physically and mentally stimulated. Also great dog training toys to keep them stay focused and make training efficiently, best dog toys for aggressive chewers、、、HEAVY DUTY DOG TOY GIFTS FOR DOGS & GUARANTEE - Dog toy bundle are essential dog tug toys for dogs, best as christmas dog toys and dog birthday toys. The nearly indestructible tough dog toys for aggressive chewers large breed are long lasting and perfect as pitbull toys, german shepherd toys. If your dogs are extremely aggressive chewers, please only play the dog tug toys for large dogs under supervision. We are confident with premium dog toy pack and offer 30 days money-back guarantee"
         }
       ];
 
 checkAnswer(cat);
-
 function checkAnswer (a){
    
         console.log(a);
@@ -222,7 +242,28 @@ function checkAnswer (a){
               console.log(displayOther);
               console.log(displayOther[0].id)
               document.getElementById("icon1").src="images/"+displayOther[0].id+".png";
+              $('#product1').find("a").attr("value",displayOther[0].id);
+              document.getElementById("productId1").innerText=displayOther[0].id;
+              console.log($('#product1').find("a").attr("value"));
               document.getElementById("icon2").src="images/"+displayOther[1].id+".png";
+              $('#product2').find("a").attr("value",displayOther[1].id);
+              document.getElementById("productId2").innerText=displayOther[1].id;
               document.getElementById("icon3").src="images/"+displayOther[2].id+".png";
+              $('#product3').find("a").attr("value",displayOther[2].id);
+              document.getElementById("productId3").innerText=displayOther[2].id;
+              
+          
+            
+         
+             
             
 }
+
+$(".flex-item").click(function () {
+
+  console.log($(this).find("a").attr("value"));
+  let result=$(this).find("a").attr("value");
+  localStorage.setItem("proResult", result);
+ 
+
+});

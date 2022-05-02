@@ -173,6 +173,22 @@ var productData = [
     price: "price1",
     brand: "brand3",
     size: "null"
+  },
+  {
+    id: "T-004",
+    type: "toy",
+    color: "null",
+    price: "price2",
+    brand: "brand2",
+    size: "null"
+  },
+  {
+    id: "T-005",
+    type: "toy",
+    color: "null",
+    price: "price3",
+    brand: "brand1",
+    size: "null"
   }
 ];
 

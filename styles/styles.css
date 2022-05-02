@@ -1,21 +1,29 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 
+
 html {
-    box-sizing: border-box;
-  }
-  
-  *,
-*::before,
-*::after {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  background: cover;
+}
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
-  padding: 0;
-  margin: 0;
 }
 html,
 body {
   font-family: sans-serif;
-  background-color: white;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+body{
+  margin-top:-45px;
 }
 nav {
   display: flex;
@@ -25,9 +33,9 @@ nav {
   width: 105%;
   background-color: white;
   z-index: 5;
-  margin: -1em 0em 5em -1em;
-  padding-top: 2em;
-  padding-bottom:3.5em;
+  margin: 2em 0em 1em -1em;
+  padding-top: 1.5em;
+  padding-bottom:2em;
   color: #333333;
 }
 nav a{
@@ -35,8 +43,9 @@ nav a{
   text-transform:uppercase;
   text-decoration:none;
   color:#16151b;
-  margin:0 15px;
   font-size:16px;
+  padding:5px;
+  padding-left:10px;
   letter-spacing:1px;
   position:relative;
   display:inline-block;
@@ -96,6 +105,13 @@ nav a:hover:before{
   }
  
 
+
+h1:hover {
+  text-shadow: 2px 2px pink;
+}
+body{
+
+}
  
   
   .slide-link {

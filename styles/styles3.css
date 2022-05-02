@@ -29,7 +29,7 @@ nav {
   
   background-color: white;
   z-index: 5;
-  margin: 2em 0em 1em -1em;
+  margin: 2em 0em 1em -5px;
   padding-top: 1.5em;
   padding-bottom:2em;
   color: #333333;
@@ -47,7 +47,6 @@ nav a{
   position:relative;
   display:inline-block;
 }
-
 nav a:before{
   content:'';
   position: absolute;
@@ -122,10 +121,6 @@ h3 {
   justify-content: space-evenly;
 }
 
-#productName {
-  margin-left: 50px;
-  margin-right: 50px;
-}
 
 h2 {
   margin-top: 1.5em;
@@ -195,10 +190,11 @@ a:hover {
 }
 .flex-container {
   display: flex;
-  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   padding: 0;
+    flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 .flex-item {
   display: block;
@@ -240,50 +236,26 @@ header {
   padding-top: 9em;
 }
 
-.flex-container {
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
+
 .cuties {
   font-size: 40px;
 }
 
-@media screen and (min-width: 801px) {
-  .clearfix {
-    overflow: auto;
-    margin-left: 10em;
-  }
-  .price {
-    margin-left: 350px;
-  }
-  #product-image {
-    float: left;
-    width: 150px;
-    height: 150px;
-    box-shadow: 10px 5px 5px 0 rgba(3, 6, 26, 0.35);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #product-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .list-text {
+@media screen and (max-width: 900px){
+    .list-text {
     display: flex;
     margin-left: auto;
     margin-right: auto;
   }
-  #product-image {
-    float: center;
-    width: 150px;
-    height: 150px;
-    box-shadow: 10px 5px 5px 0 rgba(3, 6, 26, 0.35);
-  }
-}
-iframe{
+    iframe{
   font-family: "Didact Gothic", sans-serif;
   width:100%;
-  
 }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+}
+    .flex-item{
+        flex:1 0 35%;
+        margin: 5px;
+    }
