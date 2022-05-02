@@ -312,3 +312,12 @@ $("#toy").click(function () {
 $(".radio-item").click(function () {
   $slideshow.slick("slickNext");
 });
+
+$(".radio-item").hover(function(){ 
+  $(".slick-slide").addClass('animate');
+  
+}).mouseout(function(){ 
+  $(".slick-slide").removeClass("animate");
+   
+});
+
