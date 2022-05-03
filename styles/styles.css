@@ -315,7 +315,7 @@ input[value='blue']:hover + label {
   background: rgb(216, 127, 219);
  }
  input[value='orange']:hover + label {
-  background: rgb(221, 146, 75);
+  background: rgb(226, 144, 67);
  }
  input[value='white']:hover + label {
   background: rgb(241, 241, 241);
