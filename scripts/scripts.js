@@ -284,6 +284,7 @@ function getPage(result) {
 $(document).ready(function () {
   $slideshow = $(".carousel").slick({
     slidesToShow: 1,
+    adaptiveHeight: true,
     infinite: false,
     dots: true
   });
@@ -306,19 +307,19 @@ $("#cloth").click(function () {
 
   $(".carousel").slick("slickFilter", ".clothslide");
 });
-$("#toy").click(function () {
-  $(".carousel").lick("slickUnfilter");
+ $("#toy").click(function () {
+  $(".carousel").slick("slickUnfilter");
 
   $(".carousel").slick("slickFilter", ".toyslide");
 });
 
-$(".radio-item").click(function () {
+$(".radio-item").change(function () {
   $(".carousel").slick("slickNext");
 });
 
 
 
-$(".radio-item").click(function () {
+$(".radio-item").change(function () {
 
   let a=$("input[type='radio'][name='q1']:checked").parent().find('label').text()+" ";
   console.log( $("input[type='radio'][name='q1']:checked").parent().find('label').text()+"");
@@ -332,4 +333,22 @@ $(".radio-item").click(function () {
   console.log( $("input[type='radio'][name='q5']:checked").parent().find('label').text()+"");
   document.getElementById("finalTitle").innerText="Your Choices:"+" "+a+"  "+b+"  "+c+"  "+d+"  "+e;
 });
+
+let typeQ = $('input[name=q1]');
+       let priceQ = $('input[name=q2]');
+       let  brandQ = $('input[name=q3]');
+       let  sizeQ = $('input[name=q4]');
+       let  colorQ = $('input[name=q5]');
+        
+validate();
+   
+          $("input[type='radio']").change(validate);
+     
+          function validate() {
+              if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
+                  $("#btnsubmit").removeAttr("disabled", false);
+              } else {
+                  $("#btnsubmit").attr("disabled", true);
+              }
+          }
 
