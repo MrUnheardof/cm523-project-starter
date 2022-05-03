@@ -115,12 +115,7 @@ nav a:hover{
   .slick-slider .slick-track {
     transition-delay: 0.4s !important;
   }
-.wrapper{
-  background: linear-gradient(
-    0deg,
-    rgba(211, 194, 206, 1) 0%,
-    rgba(226, 175, 222, 1) 100%
-  )}
+
 
 h1:hover {
   text-shadow: 2px 2px pink;
@@ -220,13 +215,6 @@ h2 {
     
   }*/
 
-.animate{
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-
-}
 
 @keyframes gradient {
 	0% {
