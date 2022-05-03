@@ -40,15 +40,13 @@ nav a{
   text-decoration:none;
   color:#16151b;
   margin-top:10px;
-  margin-left:20px;
-  padding:5px;
+  padding-left:1.5em;
   padding-top: 2em;
   font-size:16px;
   letter-spacing:1px;
   position:relative;
   display:inline-block;
 }
-
 nav a:before{
  
 }
@@ -116,10 +114,6 @@ h3 {
   justify-content: space-evenly;
 }
 
-#productName {
-  margin-left: 50px;
-  margin-right: 50px;
-}
 
 h2 {
   margin-top: 1.5em;
@@ -189,17 +183,18 @@ a:hover {
 }
 .flex-container {
   display: flex;
-  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   padding: 0;
+    flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 .flex-item {
   display: block;
 }
 img {
   width: 100%;
-  
+  box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
 }
 .flex-item > a {
   box-sizing: border-box;
@@ -234,50 +229,141 @@ header {
   padding-top: 9em;
 }
 
-.flex-container {
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
+
 .cuties {
   font-size: 40px;
 }
 
-@media screen and (min-width: 801px) {
-  .clearfix {
-    overflow: auto;
-    margin-left: 10em;
-  }
-  .price {
-    margin-left: 350px;
-  }
-  #product-image {
-    float: left;
-    width: 150px;
-    height: 150px;
-    
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #product-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .list-text {
+@media screen and (max-width: 900px){
+    .list-text {
     display: flex;
     margin-left: auto;
     margin-right: auto;
   }
-  #product-image {
-    float: center;
-    width: 150px;
-    height: 150px;
-    box-shadow: 10px 5px 5px 0 rgba(3, 6, 26, 0.35);
-  }
-}
-iframe{
+    iframe{
   font-family: "Didact Gothic", sans-serif;
   width:100%;
-  
 }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+}
+    .flex-item{
+        flex:1 0 35%;
+        margin: 5px;
+    }
+  }
+
+  @media screen and (min-width: 801px) {
+    .clearfix {
+      overflow: auto;
+      margin-left: 10em;
+    }
+    .price {
+      margin-left: 350px;
+    }
+    #product-image {
+      float: left;
+      width: 150px;
+      height: 150px;
+      
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #product-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .list-text {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #product-image {
+      float: center;
+      width: 150px;
+      height: 150px;
+      box-shadow: 10px 5px 5px 0 rgba(3, 6, 26, 0.35);
+    }
+  }
+  iframe{
+    font-family: "Didact Gothic", sans-serif;
+    width:100%;
+    
+  }
+  
+  
+  #productName {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .aboutP{
+    width:40%;
+    min-width:800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  
+  .design{
+    background-color:white;
+    width:40%;
+    min-width:800px;
+    margin:auto;
+    color:black;
+  }
+  .documents{
+    background-color:white;
+    width:40%;
+    min-width:800px;
+    margin:auto;
+    color:black;
+  
+  }
+  .aboutUs{
+    background-color:white;
+    width:40%;
+    min-width:800px;
+    margin:auto;
+    color:black;
+  }
+  .sourceOfInformation{
+    background-color:white;
+    width:40%;
+    min-width:800px;
+    margin:auto;
+    color:black;
+  }
+  h3 {
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: #333333;
+    color: white;
+    border-bottom: 5px solid #e2e1b9;
+    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  h4 {
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: #333333;
+    color: white;
+    border-bottom: 5px solid #e2e1b9;
+    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+  }
