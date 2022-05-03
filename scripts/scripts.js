@@ -345,16 +345,22 @@ validate();
           $("input[type='radio']").change(validate);
      
           function validate() {
-              if ($("#toy").is ('checked')||$("#harness").is ('checked')){
+              if ($("#toy").is (':checked')||$("#harness").is (':checked')){
               if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
+                  console.log("1");
                   $("#btnsubmit").removeAttr("disabled", false);
-              } 
-              if ($("#food").is ('checked')||$("#toy").is ('checked')){
-                if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
+                  return;
+              }
+            } 
+              if ($("#food").is (':checked')||$("#toy").is (':checked')){
+                if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked'))  {
+                  console.log("2");
                     $("#btnsubmit").removeAttr("disabled", false);
+                    return;
                 }
               }
+              else{console.log("3");
                   $("#btnsubmit").attr("disabled", true);
               }
-          }
-
+          
+            }
