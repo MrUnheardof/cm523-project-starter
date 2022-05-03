@@ -345,9 +345,15 @@ validate();
           $("input[type='radio']").change(validate);
      
           function validate() {
+              if ($("#toy").is ('checked')||$("#harness").is ('checked')){
               if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
                   $("#btnsubmit").removeAttr("disabled", false);
-              } else {
+              } 
+              if ($("#food").is ('checked')||$("#toy").is ('checked')){
+                if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
+                    $("#btnsubmit").removeAttr("disabled", false);
+                }
+              }
                   $("#btnsubmit").attr("disabled", true);
               }
           }
