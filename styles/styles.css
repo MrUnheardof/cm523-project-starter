@@ -134,16 +134,15 @@ h1:hover {
    
   }
   
-  .slick-track
-  {
-      display: flex !important;
-  }
-  
-  .slick-slide
-  {
-      height: inherit !important;
-  }
-
+ .slick-dots{
+  position: absolute;
+  bottom: -45px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+ }
 
 .wrapper {
   width: 100%;
@@ -165,26 +164,22 @@ h2 {
   justify-content: centercenter;
 }
 
- 
 .carousel {
   position:fixed;
-  width: `````````%;
+  width: 100%;
   margin:0px;
   padding-right:-1em;
 
 }
-.slick-track
-{
-    display: flex !important;
-}
+
 
 
 .slick-slide {
-  display:flex;
+ 
   box-sizing: border-box;
   justify-content:center;
   width:200px;
-  height: inherit !important;
+ 
   background: white;
   margin: 1em;
   box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
@@ -207,10 +202,6 @@ h2 {
 	}
 }
 
-.slick-dots{
-  position:relative;
-  
-}
 
 .slide-select{
   display: flex;
@@ -312,7 +303,10 @@ input:checked + label {
   );
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1024px) {
+  h3{
+    font-size:1.5em;
+  }
   h2{
     font-size:2em;
   }
@@ -320,4 +314,35 @@ input:checked + label {
 input:not(:checked) + label{
     font-size:0.5em;
   }
+}
+
+@media screen and (max-width: 480px){
+  nav a{
+    font-size:1em;
+  }
+  h3{
+    font-size:1.em;
+  }
+  h2{
+    font-size:1.5em;
+  }
+  input:checked + label,
+input:not(:checked) + label{
+    font-size:0.3em;
+  }
+}
+
+
+.slick-track {
+  display: flex !important;
+  height: auto;
+}
+
+.slick-slide {
+  height: auto;
+}
+
+#btnsubmit:disabled{
+  background-color: #6975a5d7;
+    opacity: 0.7;
 }
