@@ -1,0 +1,203 @@
+
+html {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+  background: cover;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 105%;
+  
+  background-color: white;
+  z-index: 5;
+  margin: 1.4em 0em 10em -0.1em;
+ 
+  padding-bottom:2em;
+  color: #333333;
+}
+nav a{
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#16151b;
+  margin-top:10px;
+  margin-left:20px;
+  padding:5px;
+  padding-top: 2em;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+
+.cuties {
+  font-size: 40px;
+}
+
+html,
+body {
+  height: 100%;
+}
+nav,
+header {
+  padding-top: 0em;
+  margin-bottom: -2em;
+}
+  @keyframes in{
+    0%{
+      width: 0;
+      left:0;
+      right:auto;
+    }
+    100%{
+      left:0;
+      right:auto;
+      width: 100%;
+    }
+  }
+  @keyframes out{
+    0%{
+      width:100%;
+      left: auto;
+      right: 0;
+    }
+    100%{
+      width: 0;
+      left: auto;
+      right: 0;
+    }
+  }
+  @keyframes show{
+    0%{
+      opacity:0;
+      transform:translateY(-10px);
+    }
+    100%{
+      opacity:1;
+      transform:translateY(0);
+    }
+  }
+  
+  @for $i from 1 through 5 {
+    nav a:nth-child(#{$i}){
+      animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+  }
+
+h1:hover {
+  text-shadow: 2px 2px pink;
+}
+
+h2 {
+  margin-top: 1.5em;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+a:hover {
+  border: none;
+  transition: 1s;
+}
+
+.container {
+  position: relative;
+  padding: 1em;
+  padding-top: 7em;
+  min-height: 95%;
+  line-height: 1.5em;
+  background: linear-gradient(
+    0deg,
+    rgba(211, 194, 206, 1) 0%,
+    rgba(226, 175, 222, 1) 100%
+  );
+} 
+
+p{
+  width:40%;
+  min-width:800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.design{
+  background-color:white;
+  width:40%;
+  min-width:800px;
+  margin:auto;
+  color:black;
+}
+.documents{
+  background-color:white;
+  width:40%;
+  min-width:800px;
+  margin:auto;
+  color:black;
+
+}
+.aboutUs{
+  background-color:white;
+  width:40%;
+  min-width:800px;
+  margin:auto;
+  color:black;
+}
+.sourceOfInformation{
+  background-color:white;
+  width:40%;
+  min-width:800px;
+  margin:auto;
+  color:black;
+}
+h3 {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #333333;
+  color: white;
+  border-bottom: 5px solid #e2e1b9;
+  box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+h4 {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  background-color: #333333;
+  color: white;
+  border-bottom: 5px solid #e2e1b9;
+  box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width:40%;
+  min-width:800px;
+  margin:auto;
+}
