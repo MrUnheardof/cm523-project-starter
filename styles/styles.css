@@ -166,8 +166,10 @@ h2 {
 
 .carousel {
   position:fixed;
-  width: 100%;
-  margin:0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+ 
   padding-right:-1em;
 
 }
@@ -236,7 +238,7 @@ input:not(:checked) + label{
 	display: inline-block;
 	padding: 1em;
 	width: auto;
-	font-size: 1em;
+	font-size: 0.8em;
 	line-height: 20px;
 	letter-spacing: 1px;
 	margin: 0 auto;
@@ -332,7 +334,7 @@ input:checked + label {
   );
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   h3{
     margin-top:0em;
     font-size:1.5em;
