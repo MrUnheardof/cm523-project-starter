@@ -333,14 +333,6 @@ input:not(:checked) + label{
 }
 
 
-.slick-track {
-  display: flex !important;
-  height: auto;
-}
-
-.slick-slide {
-  height: auto;
-}
 
 #btnsubmit:disabled{
   background-color: #6975a5d7;
