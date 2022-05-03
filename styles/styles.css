@@ -181,7 +181,6 @@ h2 {
   width:200px;
   height: inherit !important;
   background: white;
-  
   margin: 1em;
   box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
   border-bottom: 10px teal;
@@ -189,31 +188,6 @@ h2 {
 }
 
 
-  
-  /*.slide-link {
-    display: block;
-    font-family: 'K2D', sans-serif;
-    color:white;
-    font-weight:bold;
-    font-size:10em;
-    padding-left:100px;
-  }
-  .slide-select {
-  position: absolute;
-  display: flex;
-  align-content:center;
-  padding-left:5em;
-  flex-direction: column;
-   padding: 10px;
-   justify-content: center;
-   background-color:rgba(250, 250, 250, 0.7);
-   width:6%;
-  height: 100vh;
-  
-  
-  
-    
-  }*/
 
 
 @keyframes gradient {

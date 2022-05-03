@@ -331,10 +331,3 @@ $(".radio-item").click(function () {
 });
 
 
-/*$(".radio-item").hover(function(){ 
-  $(".slick-slide").addClass('animate');
-  
-}).mouseout(function(){ 
-  $(".slick-slide").removeClass("animate");
-   
-});*/
