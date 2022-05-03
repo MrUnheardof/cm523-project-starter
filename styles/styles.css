@@ -7,6 +7,10 @@ html {
   color: white;
   font-family: "Didact Gothic", sans-serif;
   background: cover;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 *,
@@ -55,6 +59,7 @@ nav a{
 
 
 h3 {
+ 
   display: block;
   font-size:2em;
   margin-left:1em;

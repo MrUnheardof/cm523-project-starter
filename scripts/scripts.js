@@ -290,33 +290,36 @@ $(document).ready(function () {
 });
 
 $("#food").click(function () {
-  $slideshow.slick("slickUnfilter");
+  $(".carousel").slick("slickUnfilter");
 
-  $slideshow.slick("slickFilter", ".foodslide");
+  $(".carousel").slick("slickFilter", ".foodslide");
 });
 
 $("#harness").click(function () {
-  $slideshow.slick("slickUnfilter");
+  $(".carousel").slick("slickUnfilter");
 
-  $slideshow.slick("slickFilter", ".harnesslide");
+  $(".carousel").slick("slickFilter", ".harnesslide");
 });
 
 $("#cloth").click(function () {
-  $slideshow.slick("slickUnfilter");
+  $(".carousel").slick("slickUnfilter");
 
-  $slideshow.slick("slickFilter", ".clothslide");
+  $(".carousel").slick("slickFilter", ".clothslide");
 });
 $("#toy").click(function () {
-  $slideshow.slick("slickUnfilter");
+  $(".carousel").lick("slickUnfilter");
 
-  $slideshow.slick("slickFilter", ".toyslide");
+  $(".carousel").slick("slickFilter", ".toyslide");
+});
+
+$(".radio-item").click(function () {
+  $(".carousel").slick("slickNext");
 });
 
 
-textFinal=[];
 
 $(".radio-item").click(function () {
-  $slideshow.slick("slickNext");
+
   let a=$("input[type='radio'][name='q1']:checked").parent().find('label').text()+" ";
   console.log( $("input[type='radio'][name='q1']:checked").parent().find('label').text()+"");
   let b=$("input[type='radio'][name='q2']:checked").parent().find('label').text()+" ";
@@ -329,5 +332,4 @@ $(".radio-item").click(function () {
   console.log( $("input[type='radio'][name='q5']:checked").parent().find('label').text()+"");
   document.getElementById("finalTitle").innerText="Your Choices:"+" "+a+"  "+b+"  "+c+"  "+d+"  "+e;
 });
-
 
