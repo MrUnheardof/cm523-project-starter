@@ -321,7 +321,7 @@ input[value='blue']:hover + label {
   background: rgb(241, 241, 241);
  }
  input[value='black']:hover + label {
-  background: rgb(36, 36, 36);
+  background: rgb(24, 24, 24);
   color:white;
  }
 input:checked + label {
