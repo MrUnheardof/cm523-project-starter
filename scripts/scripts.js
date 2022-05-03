@@ -204,8 +204,8 @@ function getAnswer() {
   answer.size = $("input[type='radio'][name='q4']:checked").val();
   console.log($("input[type='radio'][name='q5']:checked").val());
   answer.color = $("input[type='radio'][name='q5']:checked").val();
-
   findProduct(answer);
+  return answer;
 }
 
 function findProduct(ans) {
@@ -275,7 +275,6 @@ function mode(array) {
 function getPage(result) {
  
   console.log(result);
-
   localStorage.setItem("proResult", result);
 
   window.location.href= "productpage.html";
@@ -289,35 +288,53 @@ $(document).ready(function () {
     dots: true
   });
 });
+
 $("#food").click(function () {
-  $slideshow.slick("slickRemove", 2);
-  $slideshow.slick("slickRemove", 4);
-  $slideshow.slick("slickRemove", 4);
-  $slideshow.slick("slickRemove", 3);
-});
-$("#cloth").click(function () {
-  $slideshow.slick("slickRemove", 3);
-  $slideshow.slick("slickRemove", 5);
-});
-$("#harness").click(function () {
-  $slideshow.slick("slickRemove", 3);
-  $slideshow.slick("slickRemove", 4);
-});
-$("#toy").click(function () {
-  $slideshow.slick("slickRemove", 3);
-  $slideshow.slick("slickRemove", 4);
-  $slideshow.slick("slickRemove", 4);
-  $slideshow.slick("slickRemove", 3);
-});
-$(".radio-item").click(function () {
-  $slideshow.slick("slickNext");
+  $slideshow.slick("slickUnfilter");
+
+  $slideshow.slick("slickFilter", ".foodslide");
 });
 
-$(".radio-item").hover(function(){ 
+$("#harness").click(function () {
+  $slideshow.slick("slickUnfilter");
+
+  $slideshow.slick("slickFilter", ".harnesslide");
+});
+
+$("#cloth").click(function () {
+  $slideshow.slick("slickUnfilter");
+
+  $slideshow.slick("slickFilter", ".clothslide");
+});
+$("#toy").click(function () {
+  $slideshow.slick("slickUnfilter");
+
+  $slideshow.slick("slickFilter", ".toyslide");
+});
+
+
+textFinal=[];
+
+$(".radio-item").click(function () {
+  $slideshow.slick("slickNext");
+  let a=$("input[type='radio'][name='q1']:checked").parent().find('label').text()+" ";
+  console.log( $("input[type='radio'][name='q1']:checked").parent().find('label').text()+"");
+  let b=$("input[type='radio'][name='q2']:checked").parent().find('label').text()+" ";
+  console.log( $("input[type='radio'][name='q2']:checked").parent().find('label').text()+"");
+  let c=$("input[type='radio'][name='q3']:checked").parent().find('label').text()+" ";
+  console.log( $("input[type='radio'][name='q3']:checked").parent().find('label').text()+"");
+  let d=$("input[type='radio'][name='q4']:checked").parent().find('label').text()+" ";
+  console.log( $("input[type='radio'][name='q4']:checked").parent().find('label').text()+"");
+  let e=$("input[type='radio'][name='q5']:checked").parent().find('label').text()+" ";
+  console.log( $("input[type='radio'][name='q5']:checked").parent().find('label').text()+"");
+  document.getElementById("finalTitle").innerText="Your Choices:"+" "+a+"  "+b+"  "+c+"  "+d+"  "+e;
+});
+
+
+/*$(".radio-item").hover(function(){ 
   $(".slick-slide").addClass('animate');
   
 }).mouseout(function(){ 
   $(".slick-slide").removeClass("animate");
    
-});
-
+});*/
