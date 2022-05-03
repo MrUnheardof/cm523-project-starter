@@ -286,7 +286,7 @@ $(document).ready(function () {
     slidesToShow: 1,
     adaptiveHeight: true,
     infinite: false,
-    dots: true
+    dots: true,
   });
 });
 
