@@ -305,6 +305,7 @@ input:checked + label {
 
 @media screen and (max-width: 1024px) {
   h3{
+    margin-top:0em;
     font-size:1.5em;
   }
   h2{
@@ -321,6 +322,7 @@ input:not(:checked) + label{
     font-size:1em;
   }
   h3{
+    margin-top:0em;
     font-size:1.em;
   }
   h2{
