@@ -313,13 +313,13 @@ $("#cloth").click(function () {
   $(".carousel").slick("slickFilter", ".toyslide");
 });
 
-$(".radio-item").change(function () {
+$(".radio-item").click(function () {
   $(".carousel").slick("slickNext");
 });
 
 
 
-$(".radio-item").change(function () {
+$(".radio-item").click(function () {
 
   let a=$("input[type='radio'][name='q1']:checked").parent().find('label').text()+" ";
   console.log( $("input[type='radio'][name='q1']:checked").parent().find('label').text()+"");
@@ -345,7 +345,7 @@ validate();
           $("input[type='radio']").change(validate);
      
           function validate() {
-              if ($("#toy").is (':checked')||$("#harness").is (':checked')){
+              if ($("#cloth").is (':checked')||$("#harness").is (':checked')){
               if ($(typeQ).is(':checked') && $(priceQ ).is(':checked') && $(brandQ).is(':checked') && $(sizeQ).is(':checked') && $(colorQ).is(':checked') ) {
                   console.log("1");
                   $("#btnsubmit").removeAttr("disabled", false);

@@ -336,5 +336,5 @@ input:not(:checked) + label{
 
 #btnsubmit:disabled{
   background-color: #6975a5d7;
-    opacity: 0.7;
+  opacity: 0.7;
 }
