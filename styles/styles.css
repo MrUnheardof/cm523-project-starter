@@ -295,6 +295,35 @@ input:hover + label {
     rgba(226, 175, 222, 1) 100%
   );
 }
+input[value='blue']:hover + label {
+  background: rgb(93, 93, 216);
+   
+ }
+ input[value='yellow']:hover + label {
+  background: rgb(219, 209, 66);
+   
+ }
+ input[value='green']:hover + label {
+  background: rgb(66, 219, 148);
+   
+ }
+ input[value='purple']:hover + label {
+  background: rgb(125, 36, 143);
+   
+ }
+ input[value='pink']:hover + label {
+  background: rgb(216, 127, 219);
+ }
+ input[value='orange']:hover + label {
+  background: rgb(221, 146, 75);
+ }
+ input[value='white']:hover + label {
+  background: rgb(241, 241, 241);
+ }
+ input[value='black']:hover + label {
+  background: rgb(36, 36, 36);
+  color:white;
+ }
 input:checked + label {
   background: linear-gradient(
     0deg,
@@ -339,4 +368,12 @@ input:not(:checked) + label{
 #btnsubmit:disabled{
   background-color: #6975a5d7;
   opacity: 0;
+}
+
+.haha:before {
+  content: '\e95f';
+}
+
+i{
+  margin:5px;
 }
