@@ -307,6 +307,7 @@ $("#cloth").click(function () {
 
   $(".carousel").slick("slickFilter", ".clothslide");
 });
+
  $("#toy").click(function () {
   $(".carousel").slick("slickUnfilter");
 
