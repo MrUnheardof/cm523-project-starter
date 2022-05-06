@@ -173,6 +173,7 @@ label img{
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  height:auto;
   align-items: center;
   justify-content: center;
  
@@ -215,6 +216,7 @@ h3 {
 
 .slide-select{
   display: flex;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -269,7 +271,9 @@ input:checked + label{
   width:20.5vw;
   
 }
-
+i{
+  display:inline-block;
+}
 
 /* CSS */
 .button-19 {
@@ -330,4 +334,43 @@ input:checked + label{
 
 .button-19:disabled {
   cursor: auto;
+}
+
+@media screen and (max-width: 601px) {
+  nav{
+  flex-flow: column wrap;
+  padding:0;
+  
+  }
+  nav a{
+    margin:0.5em;
+  }
+
+  h1{
+    font-size:2em;
+    margin:0;
+  }
+  h2{
+    font-size:1em;
+    margin:0;
+  }
+  h3{
+    font-size:1.5em;
+    margin-top:0.5em;
+  }
+  label{
+    font-size:0.5em;
+  }
+  .dogFloat{
+    left:0;
+    bottom:0;
+    margin-top:5em;
+  }
+  label img{
+    min-width:100px;
+    padding:0 5vw;
+    
+    margin: 0 auto;
+  }
+  
 }
