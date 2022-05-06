@@ -16,6 +16,7 @@ body {
   margin: 0;
   height: 100%;
   position: relative;
+  
 
 }
 nav {
@@ -304,7 +305,7 @@ input:checked + label{
 
 .button-19:after {
   background-clip: padding-box;
-  background-color: pink;
+  background-color: #ffc0cb;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
