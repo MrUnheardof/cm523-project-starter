@@ -1,58 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px|Gochi+Hand|Coiny|Exo');
 
 html {
   box-sizing: border-box;
-  color: white;
-  font-family: "Didact Gothic", sans-serif;
-  background: cover;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: 'Coiny', cursive;
 }
 html,
 body {
-  font-family: sans-serif;
   margin: 0;
   height: 100%;
   position: relative;
+  
+
 }
-
-
 nav {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
   position: fixed;
-  width: 105%;
-  
+  width: 100%;
   background-color: white;
   z-index: 5;
-  margin: 1.4em 0em 10em -0.1em;
- 
+  padding-top: 1.5em;
   padding-bottom:2em;
   color: #333333;
+  border-radius: 0px 0px 150px 150px;
 }
 nav a{
   font-weight:500;
   text-transform:uppercase;
   text-decoration:none;
   color:#16151b;
-  margin-top:10px;
-  padding-left:1.5em;
-  padding-top: 2em;
   font-size:16px;
-  letter-spacing:1px;
+  padding:2px;
   position:relative;
   display:inline-block;
 }
-nav a:before{
- 
-}
+
 nav a:hover{
   text-shadow: 2px 2px pink;
 }
+
   @keyframes in{
     0%{
       width: 0;
@@ -93,31 +87,83 @@ nav a:hover{
       animation:show .2s #{$i*0.1+1}s ease 1 both;
     }
   }
- 
+  a:hover {
+    color: #1899D6;
+    border: none;
 
-
+    transition: 1s;
+  }
+h1{
+    font-size: 3em;
+}
 h1:hover {
   text-shadow: 2px 2px pink;
+
 }
-h3 {
-  font-family: "IBM Plex Mono", monospace;
+
+.list-text {
+    text-align: center;
+    margin-top: 120px;
+}  
+
+.documents, .aboutUs, .design{
+    display: flex;
+    flex-direction: column;
+    background-color:#fcd494;
+    width:40%;
+    min-width: 300px;
+    margin:auto;
+    color:black;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+h3{
+    text-transform: uppercase;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: #f5ad39;
+    color: black;
+    border-bottom: 5px solid #5e3e1d;
+    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 800px;
+    margin-left:auto;
+    margin-right: auto;
+
+  }
+
+.aboutPageh3{
+    padding-top: 60px;
+}
+
+.productCatagory{
+    margin-top: 60px;
+}
+
+
+h4 {
   text-transform: uppercase;
   width: 100%;
   padding: 0.5em;
   font-size: 1em;
-  background-color: #333333;
-  color: white;
-  border-bottom: 5px solid #e2e1b9;
+  background-color: #f5ad39;
+  color: black;
+  border-bottom: 5px solid #5e3e1d;
   box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width:40%;
+  min-width:300px;
+
 }
 
-
-h2 {
-  margin-top: 1.5em;
-}
+ 
 
 .container {
   position: relative;
@@ -125,12 +171,10 @@ h2 {
   padding-top: 7em;
   min-height: 95%;
   line-height: 1.5em;
-  background: linear-gradient(
-    0deg,
-    rgba(211, 194, 206, 1) 0%,
-    rgba(226, 175, 222, 1) 100%
-  );
+  justify-content: center;
+  background: white;
 }
+
 .icon {
   display: inline;
   height: 100px;
@@ -141,29 +185,31 @@ h2 {
 }
 
 button {
-  margin: 0.75em;
+  margin: auto;
   padding: 0.75em;
   font-size: 1.1em;
   font-family: "Ubuntu Mono", monospace;
   text-transform: uppercase;
-  background-color: #d3c2c7;
+  background-color: white;
   color: black;
   box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
-  border: none;
+  border-radius: 10px;
+    border: none;
 }
+
 button > a {
   color: black;
 }
+
 button:hover {
   transform: scale(1.1);
   background-color: pink;
   border-radius: 5px;
   transition: 1s;
 }
-button:disabled {
-  background-color: #6975a5d7;
-  opacity: 0.7;
-}
+
+
+
 .btn-container {
   display: flex;
   justify-content: space-around;
@@ -177,25 +223,53 @@ a {
   color: black;
   font-weight: bold;
 }
+
 a:hover {
   border: none;
   transition: 1s;
 }
+
 .flex-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-    flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: space-evenly;
 }
+
 .flex-item {
   display: block;
+
 }
+
 img {
   width: 100%;
   box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
+  border-radius: 50px;
+
 }
+
+#product-image {
+      width: 150px;
+      height: 150px;
+    }
+.centerImage{
+    display: flex;
+    justify-content: center;
+}
+
+#productName {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+#productText{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .flex-item > a {
   box-sizing: border-box;
   padding: 0.25em;
@@ -206,175 +280,64 @@ img {
   padding-left: 1em;
 }
 .flex-item > a:hover {
-  color: teal;
+  color: #1899D6;
   z-index: 100;
-}
-.card > a {
-  display: block;
-  line-height: 1.5em;
+      text-shadow: 2px 2px pink;
 }
 
-html,
-body {
-  height: 100%;
-}
-nav,
-header {
-  padding-top: 0em;
-  margin-bottom: -2em;
-}
 
 .container {
-  padding: 5em;
+  padding: auto;
   padding-top: 9em;
+  background-color: #fcd494;
 }
 
+.aboutP{
+    min-width: 300px;
+    text-align: center; 
+  }
 
-.cuties {
-  font-size: 40px;
-}
-
-@media screen and (max-width: 900px){
-    .list-text {
+.clearfix > div{
+    max-width: 1200px;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  }
-    iframe{
-  font-family: "Didact Gothic", sans-serif;
-  width:100%;
+    margin: auto;
 }
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-}
-    .flex-item{
-        flex:1 0 35%;
-        margin: 5px;
-    }
-  }
 
-  @media screen and (min-width: 801px) {
-    .clearfix {
-      overflow: auto;
-      margin-left: 10em;
-    }
+.clearfix{
+    background-color: #fcd494;
+}
+span{
+    background-color: white;
+    padding:10px;
+    border-radius: 25px;
+}
+
+  @media screen and (max-width: 601px) {
     .price {
       margin-left: 350px;
-    }
-    #product-image {
-      float: left;
-      width: 150px;
-      height: 150px;
-      
-    }
-  }
-  
-  @media screen and (max-width: 800px) {
-    #product-image {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .list-text {
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #product-image {
-      float: center;
-      width: 150px;
-      height: 150px;
-      box-shadow: 10px 5px 5px 0 rgba(3, 6, 26, 0.35);
-    }
-  }
-  iframe{
-    font-family: "Didact Gothic", sans-serif;
-    width:100%;
-    
-  }
-  
-  
-  #productName {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
+      }
 
-  .aboutP{
-    min-width: 300px;
-    width:40%;
-    text-align: center;
-    
-  }
-  
-  .design{
-    display: flex;
-    flex-direction:column;
-    background-color:white;
-    width:40%;
-    min-width: 300px;
-    margin:auto;
-    color:black;
-    align-items: center;
-    justify-content: center;
-   
-  }
-  .documents{
-    display: flex;
-    flex-direction: column;
-    background-color:white;
-    width:40%;
-    min-width: 300px;
-    margin:auto;
-    color:black;
-    align-items: center;
-    justify-content: center;
-  }
-  .aboutUs{
-    display: flex;
-    flex-direction: column;
-    background-color:white;
-    width:40%;
-    min-width: 300px;
-    margin:auto;
-    color:black;
-    align-items: center;
-    justify-content: center;
-  }
-  .sourceOfInformation{
-    background-color:white;
-    width:40%;
-    min-width:800px;
-    margin:auto;
-    color:black;
-  }
-  h3 {
-    font-family: "IBM Plex Mono", monospace;
-    text-transform: uppercase;
-    width: 100%;
-    padding: 0.5em;
-    font-size: 1em;
-    background-color: #333333;
-    color: white;
-    border-bottom: 5px solid #e2e1b9;
-    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  h4 {
-    font-family: "IBM Plex Mono", monospace;
-    text-transform: uppercase;
-    width: 100%;
-    padding: 0.5em;
-    font-size: 1em;
-    background-color: #333333;
-    color: white;
-    border-bottom: 5px solid #e2e1b9;
-    box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.35);
-    display: flex;
-    margin-top:0;
-    flex-direction: row;
-    justify-content: space-evenly;
-    
-  }
+    .list-text {
+      margin-left: auto;
+      margin-right: auto;
+        margin-top: 200px;
+      }
+      .productCatagory{
+    margin-top: 200px;
+}
+
+      .flex-container{
+          display:grid;
+          grid-template-columns: 280px;
+          grid-template-rows: auto;
+      }
+
+      
+      img{
+          margin: auto;
+      }
+
+      span{
+          display: none;
+      }
+}

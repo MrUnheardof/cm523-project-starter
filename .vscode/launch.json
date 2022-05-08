@@ -4,6 +4,7 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "name": "Launch Edge",
             "request": "launch",
@@ -16,7 +17,7 @@
             "type": "pwa-msedge",
             "request": "launch",
             "name": "Open productpage.html",
-            "file": "c:\\Users\\Admin\\Desktop\\cm523-project-starter\\index.html"
+            "file": "c:\\Users\\Admin\\Desktop\\cm523-project-starter-3\\index.html"
         }
 
         
