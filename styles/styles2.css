@@ -313,6 +313,20 @@ span{
 }
 
   @media screen and (max-width: 601px) {
+    nav{
+      flex-flow: column wrap;
+      padding:0;
+      
+      }
+      nav a{
+        margin:0.2em;
+      }
+    
+      h1{
+        font-size:2em;
+        margin:0;
+      }
+      
     .price {
       margin-left: 350px;
       }
@@ -320,24 +334,20 @@ span{
     .list-text {
       margin-left: auto;
       margin-right: auto;
-        margin-top: 200px;
+      margin-top:0;
       }
+      .aboutPageh3 {
+        padding-top: 0;
+    }
       .productCatagory{
-    margin-top: 200px;
+    
 }
 
-      .flex-container{
-          display:grid;
-          grid-template-columns: 280px;
-          grid-template-rows: auto;
-      }
-
+     
       
       img{
           margin: auto;
       }
 
-      span{
-          display: none;
-      }
+   
 }
