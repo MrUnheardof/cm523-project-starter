@@ -51,7 +51,7 @@ nav a{
 
 
 nav a:hover{
-  text-shadow: 2px 2px pink;
+  text-shadow: 2px 2px #ffc0cb;
 }
 
   @keyframes in{
@@ -108,7 +108,7 @@ nav a:hover{
 
 h1:hover {
   
-  text-shadow: 2px 2px pink;
+  text-shadow: 2px 2px #ffc0cb;
 }
 label{
   font-size: 1.5em;
@@ -170,7 +170,7 @@ h1{
 
 h2 {
   display:block;
-  color:rgb(252, 50, 84);
+  color:#f5ad39;
   text-align: center;
   margin-bottom:0;
   margin-left: auto;
@@ -266,14 +266,14 @@ label img:hover{
   
 }
 input:hover + label{
-  color:rgb(252, 50, 84);
-  text-shadow: 2px 2px pink;
+  color:#fc3254;
+  text-shadow: 2px 2px #ffc0cb;
   width:20.5vw;
   
 }
 input:checked + label{
-  color:rgb(252, 50, 84);
-  text-shadow: 2px 2px pink;
+  color:#fc3254;
+  text-shadow: 2px 2px #ffc0cb;
   width:20.5vw;
   
 }
